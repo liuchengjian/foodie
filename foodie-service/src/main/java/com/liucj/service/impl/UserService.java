@@ -16,8 +16,8 @@ import java.util.Date;
  */
 @Service("IUserService")
 public class UserService implements IUserService {
-    @Autowired
-    public UsersMapper usersMapper;
+//    @Autowired
+//    public UsersMapper usersMapper;
 
     @Override
     public boolean queryUserNameIsExist(String username) {
@@ -33,7 +33,7 @@ public class UserService implements IUserService {
         users.setNickname(userVo.getUsername());
         users.setCreatedTime(new Date());
         users.setUpdatedTime(new Date());
-        usersMapper.insert(users);
+//        usersMapper.insert(users);
         return null;
     }
 }
