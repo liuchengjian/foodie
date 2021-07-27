@@ -10,11 +10,27 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>foodie-service</artifactId>
+    <!--service -> mapper -> pojo ->common -->
     <dependencies>
         <dependency>
             <groupId>com.liucj</groupId>
             <artifactId>foodie-mapper</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
         </dependency>
     </dependencies>
 

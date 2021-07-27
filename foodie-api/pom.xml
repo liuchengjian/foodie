@@ -11,6 +11,7 @@
 
     <artifactId>foodie-api</artifactId>
     <dependencies>
+        <!-- api->service -> mapper -> pojo ->common -->
         <dependency>
             <groupId>com.liucj</groupId>
             <artifactId>foodie-service</artifactId>

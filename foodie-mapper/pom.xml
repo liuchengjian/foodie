@@ -12,11 +12,11 @@
     <artifactId>foodie-mapper</artifactId>
 
     <dependencies>
+        <!-- mapper -> pojo ->common -->
         <dependency>
             <groupId>com.liucj</groupId>
             <artifactId>foodie-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
-
         </dependency>
         <!-- 引入log4j日志依赖 -->
 <!--        <dependency>-->

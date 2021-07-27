@@ -11,6 +11,7 @@
 
     <artifactId>foodie-pojo</artifactId>
     <dependencies>
+        <!--  pojo ->common -->
         <dependency>
             <groupId>com.liucj</groupId>
             <artifactId>foodie-common</artifactId>

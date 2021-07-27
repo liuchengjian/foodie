@@ -9,6 +9,10 @@ public interface IUserService {
      */
      boolean queryUserNameIsExist(String username);
 
-    //注册
+    /**
+     * 注册
+     * @param userVo
+     * @return
+     */
     ServerResponse<String> register(UserVo userVo);
 }

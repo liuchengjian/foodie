@@ -6,8 +6,12 @@ import com.liucj.mapper.UsersMapper;
 import com.liucj.pojo.Users;
 import com.liucj.service.IUserService;
 import com.liucj.vo.UserVo;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
 
@@ -16,12 +20,16 @@ import java.util.Date;
  */
 @Service("IUserService")
 public class UserService implements IUserService {
-//    @Autowired
-//    public UsersMapper usersMapper;
-
+    @Autowired
+    private UsersMapper usersMapper;
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public boolean queryUserNameIsExist(String username) {
-        return false;
+        Example userExample = new Example(User.class);
+        Example.Criteria userCriteria = userExample.createCriteria();
+        userCriteria.andEqualTo("username", username);
+        Users result = usersMapper.selectOneByExample(userExample);
+        return result == null ? false : true;
     }
 
     @Override
