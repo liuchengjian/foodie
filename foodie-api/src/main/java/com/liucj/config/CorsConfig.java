@@ -6,6 +6,9 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+/**
+ * 设置前端跨域配置
+ */
 @Configuration
 public class CorsConfig {
 
@@ -17,6 +20,7 @@ public class CorsConfig {
         // 1. 添加cors配置信息
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("http://localhost:8080");
+        config.addAllowedOrigin("http://localhost:9999");
         config.addAllowedOrigin("http://shop.z.mukewang.com:8080");
         config.addAllowedOrigin("http://center.z.mukewang.com:8080");
         config.addAllowedOrigin("http://shop.z.mukewang.com");
